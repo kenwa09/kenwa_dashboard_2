@@ -1,0 +1,62 @@
+{
+  "name": "Kenwa — Veilig locatie delen",
+  "short_name": "Kenwa",
+  "description": "Deel je live GPS-locatie veilig met familie en vrienden via een persoonlijke code. Gratis, end-to-end beveiligd.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#6741ff",
+  "background_color": "#ffffff",
+  "lang": "nl",
+  "dir": "ltr",
+  "id": "kenwa-app",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["navigation", "utilities", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Locatie volgen",
+      "short_name": "Volgen",
+      "url": "/follow",
+      "description": "Volg een live locatie via code"
+    },
+    {
+      "name": "Inloggen",
+      "short_name": "Inloggen",
+      "url": "/auth/login",
+      "description": "Log in op je Kenwa account"
+    },
+    {
+      "name": "Account aanmaken",
+      "short_name": "Registreren",
+      "url": "/auth/register",
+      "description": "Maak gratis een Kenwa account aan"
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.kenwa.app",
+      "id": "com.kenwa.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/nl/app/kenwa/id6758799085"
+    }
+  ]
+}

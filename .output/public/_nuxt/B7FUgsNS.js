@@ -1,0 +1,1 @@
+import{a0 as n,a1 as i,n as s}from"./Dhhagz_p.js";import{u as c}from"./BcgGWMC7.js";const d=n(async r=>{let e,t;const o=c();if(!o.loggedIn&&!([e,t]=i(()=>o.fetchProfile()),e=await e,t(),e)){const a=encodeURIComponent(r.fullPath);return s(`/login?redirect=${a}`)}});export{d as default};

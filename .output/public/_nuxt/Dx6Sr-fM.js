@@ -1,0 +1,1 @@
+import{a0 as o,a1 as r,n as s}from"./Dhhagz_p.js";import{u as n}from"./BcgGWMC7.js";const f=o(async()=>{let t,a;const e=n();if(e.loggedIn||([t,a]=r(()=>e.fetchProfile()),await t,a()),e.loggedIn)return s("/admin")});export{f as default};

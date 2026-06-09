@@ -1,0 +1,957 @@
+{
+  "nav": {
+    "features": "Features",
+    "privacy": "Privacy",
+    "visitors": "Bezoekers & reviews",
+    "ads": "Adverteren",
+    "about": "Over",
+    "contact": "Contact",
+    "help": "Help",
+    "follow": "Volgen",
+    "login": "Inloggen",
+    "dashboard": "Dashboard",
+    "logout": "Uitloggen",
+    "home": "Home",
+    "blog": "Blog",
+    "shop": "Shop"
+  },
+  "layout": {
+    "adTag": "Partner advertentie",
+    "adLeft": "Compacte banner voor zorgvuldig gekozen merken die Kenwa ondersteunen.",
+    "adRight": "Discretie en zichtbaarheid zonder jouw ervaring te blokkeren.",
+    "footerTagline": "Veilig locatie delen voor teams, bedrijven en gezinnen.",
+    "productHeading": "Product",
+    "supportHeading": "Ondersteuning",
+    "legalHeading": "Juridisch",
+    "footerMenu": {
+      "features": "Features",
+      "visitors": "Bezoekers & reviews",
+      "about": "Over",
+      "login": "Inloggen"
+    },
+    "footerLegal": {
+      "privacyPolicy": "Privacybeleid",
+      "terms": "Gebruiksvoorwaarden"
+    },
+    "footerLinks": {
+      "privacy": "Privacy",
+      "terms": "Voorwaarden"
+    },
+    "footerBottom": {
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "support": "Support"
+    }
+  },
+  "search": {
+    "title": "Zoeken",
+    "placeholder": "Zoek op trefwoord, pagina of onderwerp",
+    "button": "Zoeken",
+    "noQuery": "Typ een zoekwoord om resultaten te zien.",
+    "noResults": "Geen resultaten voor \"{query}\".",
+    "results": "Zoekresultaten voor \"{query}\"",
+    "suggestions": "Probeer bijvoorbeeld \"live delen\", \"privacy\" of \"advertenties\".",
+    "categoryPage": "Pagina",
+    "categoryHelp": "Help",
+    "categorySupport": "Support",
+    "categoryLegal": "Juridisch",
+    "categoryProduct": "Product",
+    "categoryHowTo": "Handleiding"
+  },
+  "home": {
+    "hero": {
+      "badge": "Gratis • Veilig • Realtime",
+      "title": "Altijd weten waar je dierbaren zijn",
+      "text": "Deel je live locatie in seconden met familie en vrienden. Volgers hebben geen app nodig — zij vullen jouw unieke code in en zien direct waar je bent. Veilig, privacyvriendelijk en altijd in jouw controle.",
+      "start": "Gratis account aanmaken",
+      "follow": "Volg via code",
+      "note": "Tip: houd GPS/locatieservices aan voor realtime zichtbaarheid."
+    },
+    "highlights": [
+      "100% gratis voor volgers",
+      "Geen app nodig om te volgen",
+      "Jij bepaalt wie meekijkt",
+      "iOS & Android app"
+    ],
+    "cards": [
+      {
+        "title": "In 2 minuten live",
+        "text": "Maak gratis een account aan, genereer jouw unieke code en deel hem met wie jij wilt. Direct klaar."
+      },
+      {
+        "title": "Jij bepaalt alles",
+        "text": "Vernieuw je code op elk moment. Oude links stoppen direct. Volledige controle, altijd."
+      },
+      {
+        "title": "Live op de kaart",
+        "text": "Jouw volgers zien je positie direct op een interactieve kaart. Geen vertraging, geen gedoe."
+      }
+    ],
+    "howItWorks": {
+      "title": "Hoe werkt Kenwa?",
+      "subtitle": "In vier stappen live zichtbaar voor wie jij kiest",
+      "steps": [
+        {
+          "title": "Account aanmaken",
+          "text": "Registreer gratis met je e-mailadres. In minder dan 2 minuten klaar, geen creditcard nodig."
+        },
+        {
+          "title": "Volgcode genereren",
+          "text": "Ontvang een unieke persoonlijke code in je dashboard. Vernieuw hem wanneer je wilt."
+        },
+        {
+          "title": "Code delen",
+          "text": "Stuur de code via WhatsApp, sms of e-mail naar wie jij wilt laten meekijken."
+        },
+        {
+          "title": "Live gevolgd worden",
+          "text": "Jouw volgers zien je positie direct op de kaart. Jij bepaalt wanneer je stopt met delen."
+        }
+      ]
+    },
+    "useCases": {
+      "title": "Voor wie is Kenwa?",
+      "items": [
+        {
+          "title": "Gezinnen",
+          "text": "Weet altijd waar je kinderen zijn na school of 's avonds. Rust voor ouders, vrijheid voor kinderen."
+        },
+        {
+          "title": "Vrienden",
+          "text": "Vind elkaar snel op festivals, uitjes of in onbekende steden. Nooit meer eindeloos bellen."
+        },
+        {
+          "title": "Zakelijk",
+          "text": "Houd overzicht over je team op locatie, bij leveringen of in de buitendienst."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "Gratis",
+        "label": "Voor alle volgers, altijd"
+      },
+      {
+        "value": "iOS & Android",
+        "label": "App beschikbaar"
+      },
+      {
+        "value": "End-to-end",
+        "label": "Versleuteld & veilig"
+      },
+      {
+        "value": "< 2 min",
+        "label": "Om live te gaan"
+      }
+    ],
+    "whyKenwa": {
+      "title": "Waarom Kenwa?",
+      "subtitle": "Andere apps vereisen dat volgers ook een account aanmaken. Bij Kenwa niet.",
+      "items": [
+        {
+          "icon": "check",
+          "title": "Geen app nodig voor volgers",
+          "text": "Jouw familie vult gewoon de code in op kenwa.nl. Geen download, geen account, geen gedoe — voor hen werkt het direct."
+        },
+        {
+          "icon": "shield",
+          "title": "Jij bepaalt wie meekijkt",
+          "text": "Vernieuw je code wanneer je wilt. Oude links stoppen direct. Volledige controle, altijd. Jouw data wordt nooit verkocht."
+        },
+        {
+          "icon": "free",
+          "title": "Echt gratis, voor altijd",
+          "text": "Geen abonnement, geen verborgen kosten, geen betaalmuur na 30 dagen. Kenwa is en blijft gratis voor alle gebruikers."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Wat gebruikers zeggen",
+      "subtitle": "Echte ervaringen van mensen die Kenwa dagelijks gebruiken",
+      "items": [
+        {
+          "name": "Sarah K.",
+          "role": "Moeder van 2 kinderen",
+          "location": "Amsterdam",
+          "text": "Mijn dochter stuurt me haar code als ze ’s avonds weg is. Ik kan meekijken zonder haar steeds te bellen — ze heeft haar privacy en ik heb rust. Echt een aanrader voor ouders.",
+          "stars": 5
+        },
+        {
+          "name": "Mark V.",
+          "role": "Fietser & avonturier",
+          "location": "Utrecht",
+          "text": "Gebruikte Kenwa tijdens een fietstocht door Europa. Mijn partner kon altijd zien waar ik was zonder dat ik mijn telefoon hoefde te pakken. Geen enkele andere app is zo simpel.",
+          "stars": 5
+        },
+        {
+          "name": "Fatima A.",
+          "role": "Mantelzorger",
+          "location": "Rotterdam",
+          "text": "Ik gebruik Kenwa om mijn moeder in de gaten te houden. Ze hoeft zelf niks te doen, ik zie gewoon waar ze is. Zo fijn dat er geen account aanmaken voor haar nodig is.",
+          "stars": 5
+        },
+        {
+          "name": "Tom B.",
+          "role": "Vader van een tiener",
+          "location": "Den Haag",
+          "text": "Mijn zoon van 15 vindt het fijn dat hij zelf zijn code kan delen en vernieuwen. Hij heeft controle, ik heb inzicht. Dat evenwicht maakt het verschil met andere apps.",
+          "stars": 5
+        }
+      ]
+    },
+    "ad": {
+      "title": "Ruimte voor adverteerders",
+      "text": "We tonen compacte banners van vertrouwde partners. Zo blijft Kenwa gratis, terwijl de ervaring rustig en veilig aanvoelt voor iedereen die iemand wil volgen.",
+      "cta": "Lees hoe we advertenties inzetten"
+    }
+  },
+  "follow": {
+    "title": "Iemand volgen",
+    "intro": "Vraag de persoon om zijn of haar volgcode. Vul de code hieronder in om de live locatie te bekijken.",
+    "form": {
+      "label": "Volgcode",
+      "placeholder": "Bijvoorbeeld: ABC123",
+      "submit": "Bekijk locatie",
+      "submitting": "Zoeken...",
+      "hint": "Let op: de zender moet locatie delen via Kenwa en de telefoonlocatie moet aan staan."
+    },
+    "info": {
+      "title": "Hoe werkt het?",
+      "steps": [
+        "De eigenaar logt in met zijn e-mailadres en activeert GPS/locatieservices.",
+        "Hij deelt de code met jou (bijvoorbeeld via WhatsApp).",
+        "Jij vult de code in en ziet de positie zolang hij locatie deelt."
+      ]
+    },
+    "help": {
+      "title": "Locatie verschijnt niet?",
+      "intro": "Vraag de eigenaar om deze stappen te doorlopen:",
+      "steps": [
+        "Controleer of delen via Kenwa actief is en de telefoonmodus op \"Hoge nauwkeurigheid\" staat.",
+        "Geef Kenwa volledige locatietoegang en sta \"Nauwkeurige locatie\" toe.",
+        "Herstart de app of telefoon zodat er een verse GPS- of locatieservice-fix wordt opgehaald.",
+        "Probeer buiten of vlak bij een raam voor betere satellietontvangst."
+      ],
+      "outro": "Laat daarna weten dat jij klaarstaat, zodat de eigenaar de update opnieuw kan versturen."
+    },
+    "map": {
+      "lastUpdate": "Laatst bijgewerkt:",
+      "shareCode": "Volgcode:",
+      "noLocation": "We wachten op een locatie-update. Vraag de eigenaar om GPS/locatieservices te activeren.",
+      "notReceived": "nog niet ontvangen",
+      "viewToggle": "Kaartmodus",
+      "profileAlt": "Profielfoto"
+    },
+    "review": {
+      "title": "Ervaring delen",
+      "hint": "Laat een beoordeling achter voor deze volgsessie (optioneel).",
+      "starLabel": "Ster",
+      "ratingAria": "Beoordeling in sterren",
+      "name": "Je naam (optioneel)",
+      "namePlaceholder": "Bijvoorbeeld: Sam",
+      "comment": "Opmerking (optioneel)",
+      "commentPlaceholder": "Vertel kort wat je ervan vond",
+      "submit": "Verstuur review",
+      "submitting": "Versturen...",
+      "success": "Bedankt! Je review is verstuurd."
+    },
+    "errors": {
+      "ratingRequired": "Selecteer een beoordeling",
+      "submitFailed": "Versturen mislukt",
+      "codeNotFound": "Code niet gevonden",
+      "invalidCode": "Voer een geldige code in"
+    }
+  },
+  "help": {
+    "title": "Help & ondersteuning",
+    "intro": "Hier vind je de stappen om je locatie aan te zetten per toestel en hoe je Kenwa in een andere taal bekijkt. Kies de instructies die bij jouw toestel passen en volg ze stap voor stap.",
+    "ios": {
+      "title": "iPhone (iOS 16/17)",
+      "steps": [
+        "Open Instellingen > Privacy & beveiliging > Locatievoorzieningen.",
+        "Zet Locatievoorzieningen bovenaan op Aan.",
+        "Scroll naar beneden, kies je browser (Safari/Chrome) of de Kenwa-app en zet Sta locatie toe op Tijdens gebruik.",
+        "Activeer Nauwkeurige locatie voor een exacte GPS-fix.",
+        "Open Kenwa opnieuw en druk op Update locatie."
+      ]
+    },
+    "android": {
+      "title": "Android (Samsung, Pixel, Xiaomi)",
+      "steps": [
+        "Veeg omlaag en controleer of de snelkoppeling Locatie / GPS ingeschakeld is.",
+        "Ga naar Instellingen > Locatie en zet de schakelaar op Aan.",
+        "Kies Locatienauwkeurigheid of Google-locatieaccuracy en schakel hoge nauwkeurigheid in.",
+        "Open App-machtigingen, zoek je browser of de Kenwa-app en kies Altijd toestaan of Alleen tijdens gebruik.",
+        "Ga terug naar Kenwa en verstuur opnieuw een update."
+      ]
+    },
+    "desktop": {
+      "title": "Desktop browser (Chrome/Edge/Firefox)",
+      "steps": [
+        "Zorg dat je laptop GPS/locatieservices ondersteunt (wifi + Bluetooth verbeteren de nauwkeurigheid).",
+        "Klik in de adresbalk op het slotje en kies Site-instellingen.",
+        "Zet Locatie op Toestaan.",
+        "Herlaad de pagina en kies bij de pop-up voor Toestaan.",
+        "Gebruik daarna de knop Update locatie in het Kenwa-dashboard."
+      ]
+    },
+    "troubleshoot": {
+      "title": "Locatie werkt nog steeds niet?",
+      "items": [
+        "Controleer of je toestel internet heeft (wifi of mobiel).",
+        "Start de telefoon of browser opnieuw zodat je een verse GPS-fix krijgt.",
+        "Probeer buiten of bij een raam voor betere satellietontvangst.",
+        "Verwijder verouderde sharecodes en genereer een nieuwe in je dashboard.",
+        "Test handmatig: stuur een POST naar /api/locations/live met nieuwe coordinaten en je token.",
+        "Blijft het misgaan? Gebruik {{contact}} en vermeld toestel + browser."
+      ]
+    },
+    "languages": {
+      "title": "Website in een andere taal",
+      "steps": [
+        "Kies rechtsboven een taal en selecteer Nederlands of English.",
+        "De pagina ververst met de gekozen taal.",
+        "Wil je terug naar de originele versie? Selecteer opnieuw Nederlands."
+      ],
+      "note": "We werken voortdurend aan verbeterde vertalingen. Zie je een fout? Laat het ons weten via Contact."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "intro": "Bekijk de meest voorkomende vragen en oplossingen. Gebruik de zoekbalk om snel het juiste antwoord te vinden.",
+      "searchLabel": "Zoek in help-artikelen",
+      "searchPlaceholder": "Zoek op trefwoord, bijvoorbeeld \"GPS\" of \"code\"",
+      "noResults": "Geen resultaten gevonden. Probeer een ander trefwoord.",
+      "items": [
+        {
+          "question": "Hoe start ik het delen van mijn live locatie?",
+          "answer": "Ga naar de pagina Live locatie streamen, klik op Start en kies Toestaan in de pop-up. Houd GPS aan en laat het scherm actief voor de meest betrouwbare updates."
+        },
+        {
+          "question": "Waarom moet de site via HTTPS geladen worden?",
+          "answer": "Locatiegegevens zijn gevoelig. We eisen een beveiligde verbinding (https://) zodat je positie versleuteld blijft tijdens het verzenden naar onze servers."
+        },
+        {
+          "question": "Hoe deel ik mijn volgcode met anderen?",
+          "answer": "Log in op het dashboard, kopieer de volgcode onder Jouw volgcode en stuur deze via e-mail of chat naar je volgers. Zij vullen de code in op de pagina Volgen."
+        },
+        {
+          "question": "Wat doe ik als GPS geen signaal geeft?",
+          "answer": "Controleer of Locatie/GPS op hoge nauwkeurigheid staat, probeer buiten of bij een raam en herstart eventueel de telefoon. Volg daarna opnieuw de stappen in het onderdeel Probleemoplossing hieronder."
+        }
+      ],
+      "searchButton": "Zoeken",
+      "emptyPrompt": "Typ een trefwoord om passende antwoorden te zien."
+    }
+  },
+  "i18n": {
+    "selectLabel": "Kies taal",
+    "optionNl": "🇳🇱 Nederlands",
+    "optionEn": "🇬🇧 English",
+    "current": "Huidige taal: {lang}"
+  },
+  "locationStream": {
+    "title": "Deel je live locatie",
+    "lead": "Klik op de startknop en kies {allow} wanneer je telefoon of browser daarom vraagt. We sturen je GPS-positie elke 5 seconden beveiligd naar de server zodat je volgers je realtime kunnen volgen.",
+    "callout": "Klik toestaan om je locatie te delen.",
+    "statusHeading": "Status",
+    "startIdle": "Klik op Start om je live locatie veilig te versturen.",
+    "requesting": "Toestemming voor locatiedeling wordt aangevraagd...",
+    "streaming": "Live locatie wordt verstuurd...",
+    "pendingRetry": "Locatietoestemming geweigerd. Klik op \"Locatie opnieuw inschakelen\" om het opnieuw te proberen.",
+    "gpsWarning": "GPS lijkt uitgeschakeld. Schakel GPS/locatieservices in en probeer opnieuw.",
+    "gpsUnavailable": "GPS-signaal niet beschikbaar. Controleer of je toestel vrij zicht op de lucht heeft.",
+    "sendFailed": "Kon locatie niet versturen, nieuwe poging volgt automatisch.",
+    "initialSendFailed": "Kon locatie niet direct versturen, we proberen het zo weer.",
+    "permissionGranted": "Toestemming verleend. Live locatie wordt verstuurd...",
+    "browserUnsupported": "Je browser ondersteunt geen GPS. Gebruik een modern apparaat of browser.",
+    "noGps": "Je apparaat ondersteunt geen GPS.",
+    "timeout": "Locatie ophalen duurde te lang. Probeer het opnieuw.",
+    "unknownError": "Onbekende fout bij het ophalen van je locatie. Probeer het opnieuw.",
+    "secureWarning": "Deze pagina werkt alleen via een beveiligde verbinding (HTTPS).",
+    "secureReminder": "Deze pagina werkt alleen via een beveiligde verbinding (HTTPS). Open de site via https://.",
+    "start": "Start",
+    "requestingLabel": "Toestemming aanvragen...",
+    "streamingLabel": "Live locatie actief",
+    "allowButton": "Toestaan",
+    "retry": "Locatie opnieuw inschakelen",
+    "lastSent": "Laatste verzending:",
+    "coordinates": {
+      "latitude": "Breedtegraad",
+      "longitude": "Lengtegraad",
+      "accuracy": "Nauwkeurigheid",
+      "accuracySuffix": "m"
+    }
+  },
+  "dashboard": {
+    "map": {
+      "shareHeading": "Live locatie versturen",
+      "shareDescription": "We vragen pas om locatietoegang wanneer je op \"Locatie delen\" klikt. Deel alleen als je je huidige positie wilt opslaan.",
+      "shareButton": "Locatie delen",
+      "shareButtonBusy": "Locatie delen...",
+      "title": "Live kaart",
+      "lastUpdate": "Laatste update:",
+      "overlay": "Klik op \"Locatie delen\" om je eerste positie te tonen.",
+      "hint": "De kaart blijft zichtbaar, ook wanneer andere gegevens niet kunnen worden geladen.",
+      "prompt": "Wil je je locatie delen?",
+      "fallbackNotice": "Er wordt tijdelijk een standaardlocatie getoond. Klik op \"Locatie delen\" om jouw echte positie te delen.",
+      "errors": {
+        "unavailable": "Kan de locatie niet ophalen. Zorg dat locatievoorzieningen aanstaan en probeer opnieuw.",
+        "timeout": "Locatie ophalen duurde te lang. Probeer het opnieuw.",
+        "unsupported": "Geolocatie wordt niet ondersteund door dit apparaat.",
+        "generic": "Locatie bijwerken mislukt."
+      }
+    }
+  },
+  "aboutPage": {
+    "title": "Waarom ik Kenwa bouwde",
+    "intro": [
+      "Ik zag hoe vaak er verhalen opduiken van mensen die op straat, op vakantie of onderweg te maken krijgen met geweld of een noodsituatie. In zulke momenten telt elke minuut.",
+      "Familie en vrienden willen direct weten waar iemand is. Zonder hulpmiddel kost dat veel tijd en spanning. Met Kenwa kan je locatie sneller gedeeld worden zodat hulp of geruststelling dichterbij is.",
+      "Kenwa geeft een stukje zekerheid aan iedereen die meekijkt en aan degene die onderweg is. Het platform is gebouwd om eenvoudig, betrouwbaar en toegankelijk te zijn."
+    ],
+    "pillarsTitle": "Wat ik belangrijk vind",
+    "pillars": [
+      "Veiligheid staat voorop: gedeelde locaties zijn versleuteld en je beslist zelf wie mee mag kijken.",
+      "Rust voor familie: met een live kaart hoef je geen belrondes te starten als iemand vertraagd is.",
+      "Respect voor privacy: geen verborgen trackers of verkoop van gegevens."
+    ],
+    "cta": "Stuur een bericht",
+    "howItWorks": {
+      "title": "Hoe werkt Kenwa?",
+      "steps": [
+        "Maak een account aan en verifieer je e-mailadres.",
+        "Genereer een volgcode in je dashboard.",
+        "Deel de code met wie je wilt. Zij vullen de code in op onze website.",
+        "Je volgers zien je live locatie op de kaart zolang je deelt."
+      ]
+    },
+    "security": {
+      "title": "Veiligheid voorop",
+      "items": [
+        "Alle data wordt versleuteld verzonden via HTTPS.",
+        "Tweestapsverificatie via e-mail bij elke login.",
+        "Jij bepaalt wie je locatie kan zien en wanneer je stopt.",
+        "Geen tracking door derden, geen verkoop van gegevens."
+      ]
+    }
+  },
+  "adsPage": {
+    "hero": {
+      "badge": "Partnerships & Advertenties",
+      "title": "Bereik families die veiligheid serieus nemen",
+      "subtitle": "Kenwa verbindt gezinnen via realtime locatiedeling. Jouw merk staat direct naast het moment dat mensen bewust kiezen voor veiligheid.",
+      "cta": "Stuur een aanvraag"
+    },
+    "stats": [
+      {
+        "number": "",
+        "label": "Geregistreerde gebruikers"
+      },
+      {
+        "number": "",
+        "label": "Paginaweergaven"
+      },
+      {
+        "number": "",
+        "label": "Gestarte deelsessies"
+      },
+      {
+        "number": "4.8★",
+        "label": "Gemiddelde beoordeling"
+      }
+    ],
+    "audience": {
+      "title": "Jouw doelgroep gebruikt Kenwa",
+      "items": [
+        {
+          "icon": "family",
+          "title": "Ouders",
+          "text": "Ouders die de locatie van kinderen volgen en hun gezin veilig willen houden."
+        },
+        {
+          "icon": "travel",
+          "title": "Reizigers",
+          "text": "Mensen die op reis gaan en hun naasten op de hoogte houden van hun route."
+        },
+        {
+          "icon": "senior",
+          "title": "Mantelzorgers",
+          "text": "Zorgenden die ouders of kwetsbare familieleden in de gaten houden."
+        }
+      ]
+    },
+    "packages": {
+      "title": "Kies een samenwerkingsvorm",
+      "subtitle": "Van een enkelvoudige vermelding tot een volledige merkpartnership.",
+      "items": [
+        {
+          "name": "Gesponsord artikel",
+          "price": "€199",
+          "period": "per publicatie",
+          "desc": "Een redactioneel artikel op de Kenwa blog, geschreven in onze stijl, met jouw merk als centrale oplossing.",
+          "features": [
+            "Blog artikel (±600 woorden)",
+            "Dofollow link naar jouw website",
+            "Gedeeld via onze sociale kanalen",
+            "Blijft permanent online"
+          ],
+          "cta": "Aanvragen",
+          "highlight": false
+        },
+        {
+          "name": "Merkpartner",
+          "price": "€349",
+          "period": "per maand",
+          "desc": "Jouw merk zichtbaar op de meest bezochte pagina's van Kenwa, afgestemd op gezinsveiligheid.",
+          "features": [
+            "Bannerplaats op homepage & features pagina",
+            "Vermelding als 'Aanbevolen partner'",
+            "Gesponsord artikel inbegrepen",
+            "Maandelijkse rapportage"
+          ],
+          "cta": "Aanvragen",
+          "highlight": true,
+          "badge": "Meest gekozen"
+        },
+        {
+          "name": "Affiliate Partner",
+          "price": "Op maat",
+          "period": "commissie-model",
+          "desc": "Jouw producten worden aanbevolen in de Kenwa shop. Jij betaalt alleen bij een succesvolle doorverwijzing.",
+          "features": [
+            "Productvermelding in Kenwa shop",
+            "Affiliate link via jouw tracking systeem",
+            "Geen vaste kosten, alleen commissie",
+            "Geschikt voor GPS-trackers, smartwatches, beveiliging"
+          ],
+          "cta": "Aanvragen",
+          "highlight": false
+        }
+      ]
+    },
+    "suitable": {
+      "title": "Wie past bij Kenwa?",
+      "items": [
+        "GPS-trackers & slimme horloges",
+        "Gezinsverzekeringen & reisdekkingen",
+        "Thuisbeveiligingssystemen",
+        "Apps voor ouderlijk toezicht",
+        "EHBO-producten & veiligheidsaccessoires",
+        "Zorg & welzijn voor ouderen"
+      ]
+    },
+    "guidelines": {
+      "title": "Onze richtlijnen",
+      "items": [
+        "Positieve boodschappen — geen angst of druk als verkooptechniek.",
+        "Relevant voor gezinsveiligheid, reizen, gezondheid of zorg.",
+        "Transparante landingspagina zonder verborgen kosten of misleiding.",
+        "Kenwa behoudt het recht een samenwerking te weigeren."
+      ]
+    },
+    "form": {
+      "title": "Stuur een aanvraag",
+      "subtitle": "Vul het formulier in en we reageren binnen 2 werkdagen.",
+      "fields": {
+        "company": "Bedrijfsnaam",
+        "name": "Contactpersoon",
+        "email": "E-mailadres",
+        "package": "Gewenste samenwerking",
+        "packageOptions": [
+          "Gesponsord artikel",
+          "Merkpartner",
+          "Affiliate Partner",
+          "Anders / vraag"
+        ],
+        "message": "Vertel kort over je merk en doelstelling",
+        "submit": "Aanvraag versturen"
+      },
+      "success": "Bedankt! We nemen binnen 2 werkdagen contact met je op.",
+      "error": "Er ging iets mis. Probeer het opnieuw of mail naar info@kenwa.nl."
+    }
+  },
+  "featuresPage": {
+    "title": "Alles voor veilig locatie delen",
+    "subtitle": "Kenwa is ontworpen voor gezinnen, reizigers en mantelzorgers. Simpel, snel en altijd gratis.",
+    "items": [
+      {
+        "title": "Zie je dierbaren live op de kaart",
+        "text": "Weet altijd waar je kinderen, partner of ouders zijn — in real-time, zonder te hoeven bellen of WhatsAppen."
+      },
+      {
+        "title": "Geen app nodig voor volgers",
+        "text": "Familie en vrienden openen gewoon kenwa.nl en vullen jouw code in. Geen download, geen account, geen gedoe."
+      },
+      {
+        "title": "Jij bepaalt wie meekijkt",
+        "text": "Vernieuw je code op elk moment. Oude links stoppen direct. Niemand volgt je zonder jouw toestemming."
+      },
+      {
+        "title": "Altijd gratis",
+        "text": "Geen abonnement, geen verborgen kosten. Kenwa is en blijft volledig gratis voor alle gebruikers."
+      },
+      {
+        "title": "Werkt op iPhone en Android",
+        "text": "Download de Kenwa app in de App Store of Google Play. Volgers kunnen volgen via elke browser, op elk apparaat."
+      },
+      {
+        "title": "Privacyvriendelijk & veilig",
+        "text": "Jouw locatiedata wordt nooit verkocht. Je deelt alleen wanneer jij dat wilt, met wie jij dat wilt."
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "Neem contact op",
+    "intro": "Heb je vragen, ideeën of opmerkingen? Neem gerust contact op — we reageren snel.",
+    "options": [
+      {
+        "title": "WhatsApp",
+        "text": "Stuur een WhatsApp-bericht: <a href=\"https://wa.me/31683960601\" target=\"_blank\" rel=\"noopener\">+31 6 83 96 06 01</a>"
+      },
+      {
+        "title": "Telefoon",
+        "text": "Bel ons op: <a href=\"tel:+31683960601\">06 83 96 06 01</a>"
+      },
+      {
+        "title": "E-mail",
+        "text": "Stuur een e-mail naar: <a href=\"mailto:info@kenwa.nl\">info@kenwa.nl</a>"
+      }
+    ],
+    "form": {
+      "title": "Feedbackformulier",
+      "description": "Vul het formulier in. Wij versturen je bericht rechtstreeks naar het Kenwa-team.",
+      "nameLabel": "Naam",
+      "emailLabel": "E-mailadres",
+      "subjectLabel": "Onderwerp",
+      "subjectPlaceholder": "Bijvoorbeeld: Suggestie voor nieuwe feature",
+      "messageLabel": "Bericht",
+      "messagePlaceholder": "Beschrijf je vraag of idee",
+      "success": "Bedankt! Je bericht is verstuurd. We nemen zo snel mogelijk contact met je op.",
+      "errorFallback": "Er is iets misgegaan bij het versturen. Probeer het later opnieuw.",
+      "privacy": "Je gegevens worden alleen gebruikt om je bericht te beantwoorden.",
+      "button": "Verstuur bericht",
+      "buttonBusy": "Versturen..."
+    }
+  },
+  "visitorsPage": {
+    "title": "Bezoekers & reviews",
+    "intro": "Bekijk hoeveel mensen Kenwa bezocht hebben en deel jouw ervaring met de community.",
+    "stats": {
+      "pageViews": {
+        "label": "Totale bezoeken",
+        "hint": "Aantal keer dat de website is bekeken."
+      },
+      "shareUses": {
+        "label": "Deelacties",
+        "hint": "Hoe vaak een volgcode is gedeeld."
+      },
+      "reviews": {
+        "label": "Reviews",
+        "hint": "Aantal ervaringen dat is achtergelaten."
+      },
+      "averageRating": {
+        "label": "Gemiddelde score",
+        "hint": "Gemiddeld aantal sterren over alle reviews."
+      }
+    },
+    "reviewForm": {
+      "title": "Schrijf je review",
+      "hint": "Laat weten wat je van Kenwa vindt. Je naam is optioneel.",
+      "ratingAria": "Beoordeling in sterren",
+      "starLabel": "Ster",
+      "nameLabel": "Naam (optioneel)",
+      "namePlaceholder": "Bijvoorbeeld: Chris",
+      "commentLabel": "Opmerking (optioneel)",
+      "commentPlaceholder": "Vertel in het kort hoe Kenwa je geholpen heeft",
+      "submit": "Review versturen",
+      "submitting": "Versturen...",
+      "success": "Bedankt voor je review!",
+      "errorRating": "Kies een beoordeling tussen 1 en 5 sterren.",
+      "submitError": "Review versturen is mislukt. Probeer het later opnieuw."
+    },
+    "reviewList": {
+      "title": "Recente reviews",
+      "refresh": "Vernieuw",
+      "refreshing": "Vernieuwen...",
+      "loading": "Bezig met laden...",
+      "empty": "Nog geen reviews. Wees de eerste die iets deelt!",
+      "anonymous": "Anoniem",
+      "lastUpdated": "Laatst vernieuwd:",
+      "ratingAnnounce": "{rating} van 5 sterren"
+    },
+    "errors": {
+      "analytics": "Statistieken konden niet geladen worden. Probeer het later opnieuw.",
+      "counter": "De bezoekersteller kon niet geladen worden. Probeer het later opnieuw."
+    }
+  },
+  "privacyPage": {
+    "title": "Privacybeleid",
+    "intro": "Wij verwerken locatiegegevens uitsluitend om de dienst aan te bieden. Je kunt altijd je toestemming intrekken en je data laten verwijderen.",
+    "highlights": [
+      "Locatiegegevens worden alleen gedeeld met personen die jij kiest.",
+      "Alle sessies zijn beveiligd met tokens en verlopen automatisch.",
+      "Locatie wordt alleen opgehaald wanneer je op \"Locatie delen\" klikt.",
+      "Admins kunnen verzoeken om data te verwijderen inwilligen."
+    ]
+  },
+  "termsPage": {
+    "title": "Gebruiksvoorwaarden",
+    "paragraphs": [
+      "Door Kenwa te gebruiken ga je akkoord met ons privacybeleid en handel je conform de wet.",
+      "Misbruik van locatiegegevens leidt tot onmiddellijke beëindiging van je account."
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Nieuws, tips en updates van Kenwa",
+    "empty": "Nog geen artikelen gepubliceerd.",
+    "readMore": "Lees verder",
+    "backToList": "Terug naar blog"
+  },
+  "admin": {
+    "nav": {
+      "overview": "Overzicht",
+      "users": "Gebruikers",
+      "shares": "Deelverzoeken",
+      "blog": "Blog",
+      "banners": "Banners"
+    },
+    "blog": {
+      "title": "Blog beheer",
+      "create": "Nieuw artikel",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "confirmDelete": "Weet je zeker dat je dit artikel wilt verwijderen?",
+      "titleLabel": "Titel",
+      "contentLabel": "Inhoud",
+      "excerptLabel": "Samenvatting",
+      "coverImageLabel": "Cover afbeelding URL",
+      "statusLabel": "Status",
+      "draft": "Concept",
+      "published": "Gepubliceerd",
+      "save": "Opslaan",
+      "saving": "Opslaan...",
+      "saved": "Opgeslagen",
+      "empty": "Geen artikelen. Maak je eerste artikel aan."
+    },
+    "banners": {
+      "title": "Banner beheer",
+      "create": "Nieuwe banner",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "confirmDelete": "Weet je zeker dat je deze banner wilt verwijderen?",
+      "titleLabel": "Titel",
+      "imageUrlLabel": "Afbeelding URL",
+      "linkUrlLabel": "Link URL",
+      "positionLabel": "Positie",
+      "activeLabel": "Actief",
+      "sortOrderLabel": "Volgorde",
+      "save": "Opslaan",
+      "saving": "Opslaan...",
+      "empty": "Geen banners. Maak je eerste banner aan."
+    },
+    "users": {
+      "title": "Gebruikersbeheer",
+      "createUser": "Nieuw account",
+      "block": "Blokkeer",
+      "unblock": "Deblokkeer",
+      "blocked": "Geblokkeerd",
+      "active": "Actief",
+      "nameLabel": "Naam",
+      "emailLabel": "E-mailadres",
+      "phoneLabel": "Telefoonnummer",
+      "passwordLabel": "Wachtwoord",
+      "create": "Aanmaken",
+      "creating": "Aanmaken...",
+      "created": "Account aangemaakt"
+    },
+    "overview": {
+      "title": "Beheer",
+      "visitors": "Bezoekers",
+      "codeUses": "Code gebruik"
+    }
+  },
+  "trust": {
+    "encrypted": "Versleutelde verbinding",
+    "verified": "Geverifieerd",
+    "gdpr": "GDPR compliant",
+    "secure": "Veilige data",
+    "smsVerified": "E-mail verificatie",
+    "safeSharing": "Veilig delen",
+    "ssl": "SSL beveiligd",
+    "twofa": "2FA verificatie"
+  },
+  "codeUsage": {
+    "title": "Code gebruik",
+    "empty": "Je code is nog niet gebruikt.",
+    "date": "Datum",
+    "code": "Code"
+  },
+  "cookieBanner": {
+    "text": "Kenwa gebruikt cookies voor je sessie en taalvoorkeur. Geen tracking door derden.",
+    "accept": "Akkoord",
+    "decline": "Weigeren"
+  },
+  "auth": {
+    "login": {
+      "tagline": "Locatie delen met vertrouwde personen",
+      "title": "Welkom terug",
+      "subtitle": "Log in om verder te gaan",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "naam@voorbeeld.nl",
+      "passwordLabel": "Wachtwoord",
+      "showPassword": "Toon wachtwoord",
+      "hidePassword": "Verberg wachtwoord",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "submit": "Inloggen",
+      "submitting": "Bezig...",
+      "noAccount": "Nog geen account?",
+      "createAccount": "Maak er een aan",
+      "twofa": {
+        "title": "Controleer je e-mail",
+        "subtitle": "We hebben een inlogcode gestuurd naar",
+        "spamNote": "Check ook je spam/ongewenste map",
+        "emailFailed": "E-mail kon niet worden verstuurd. Gebruik deze code:",
+        "codeLabel": "Code invoeren",
+        "submit": "Inloggen",
+        "submitting": "Controleren...",
+        "back": "← Terug naar inloggen"
+      },
+      "errors": {
+        "emailRequired": "Vul je e-mailadres in",
+        "passwordRequired": "Vul je wachtwoord in",
+        "codeRequired": "Voer de verificatiecode in"
+      }
+    },
+    "forgot": {
+      "title": "Wachtwoord vergeten?",
+      "subtitle": "Geen probleem. Vul je e-mailadres in en we sturen je een nieuw wachtwoord.",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "naam@voorbeeld.nl",
+      "submit": "Nieuw wachtwoord aanvragen",
+      "submitting": "Versturen...",
+      "successTitle": "Controleer je e-mail",
+      "spamNote": "Check ook je spam/ongewenste map",
+      "toLogin": "Naar inloggen",
+      "remember": "Weet je het weer?",
+      "backToLogin": "Terug naar inloggen",
+      "errors": {
+        "emailRequired": "Vul je e-mailadres in",
+        "failed": "Aanvraag mislukt. Probeer het later opnieuw."
+      }
+    },
+    "reset": {
+      "title": "Pagina niet meer beschikbaar",
+      "subtitle": "Wachtwoord resetten werkt nu anders. Vraag een nieuw wachtwoord aan en ontvang deze per e-mail.",
+      "requestNew": "Nieuw wachtwoord aanvragen",
+      "backToLogin": "Terug naar inloggen"
+    },
+    "register": {
+      "tagline": "Maak een account aan",
+      "title": "Registreren",
+      "subtitle": "Vul je gegevens in om te beginnen",
+      "nameLabel": "Naam",
+      "namePlaceholder": "Je volledige naam",
+      "phoneLabel": "Telefoonnummer",
+      "phoneHint": "Lokaal nummer, met of zonder beginnnul (bijv. 0612345678)",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "naam@voorbeeld.nl",
+      "passwordLabel": "Wachtwoord",
+      "passwordPlaceholder": "Minimaal 8 tekens",
+      "photoLabel": "Profielfoto (optioneel)",
+      "photoPreviewAlt": "Voorbeeld",
+      "submit": "Account aanmaken",
+      "submitting": "Bezig...",
+      "hasAccount": "Al een account?",
+      "loginLink": "Inloggen",
+      "verify": {
+        "title": "Controleer je e-mail",
+        "subtitle": "We hebben een verificatiecode gestuurd naar",
+        "spamNote": "Check ook je spam/ongewenste map",
+        "emailFailed": "E-mail kon niet worden verstuurd. Gebruik deze code:",
+        "shareCodeLabel": "Je persoonlijke volgcode (voor later):",
+        "shareCodeHint": "Hiermee kunnen anderen je locatie volgen.",
+        "shareCodeExpiry": "Vervalt op",
+        "codeLabel": "Verificatiecode invoeren",
+        "submit": "Account activeren",
+        "submitting": "Controleren...",
+        "resend": "Nieuwe code versturen",
+        "expiry": "Code verloopt op"
+      },
+      "errors": {
+        "nameRequired": "Vul je naam in",
+        "emailInvalid": "Vul een geldig e-mailadres in",
+        "passwordTooShort": "Wachtwoord moet minimaal 8 tekens bevatten",
+        "codeRequired": "Vul de verificatiecode in",
+        "noVerification": "Vraag eerst een verificatiecode aan",
+        "captchaRequired": "Bevestig dat je geen robot bent"
+      }
+    }
+  },
+  "shopPage": {
+    "badge": "Binnenkort beschikbaar",
+    "title": "Kenwa Veiligheidsshop",
+    "subtitle": "We werken hard aan onze webshop. Binnenkort kun je hier kwalitatieve veiligheidsproducten bestellen.",
+    "comingSoonBanner": "De shop is nog niet open. Schrijf je in voor een melding zodra we live gaan.",
+    "notifyButton": "Meld me aan",
+    "productsTitle": "Dit kun je binnenkort verwachten",
+    "productsSubtitle": "Een voorproefje van onze zorgvuldig geselecteerde producten",
+    "buyButton": "Binnenkort",
+    "categoriesTitle": "Productcategorieën",
+    "comingSoon": "Binnenkort",
+    "bestseller": "Bestseller",
+    "new": "Nieuw",
+    "categories": {
+      "personal": "Persoonlijke beveiliging",
+      "gps": "GPS & Tracking",
+      "home": "Thuisbeveiliging",
+      "child": "Kinderbeveiliging",
+      "firstAid": "EHBO & Noodhulp",
+      "certified": "Gecertificeerde producten"
+    },
+    "products": [
+      {
+        "title": "Persoonlijk Noodalarm",
+        "description": "Compact 130dB sleutelhangeralarm. Trek direct aandacht in noodsituaties. Lichtgewicht en altijd bij de hand.",
+        "price": "19,95",
+        "badge": "Bestseller",
+        "category": "personal"
+      },
+      {
+        "title": "GPS Mini Tracker Pro",
+        "description": "Realtime GPS-tracker voor tassen, fietsen en auto's. Batterijduur tot 7 dagen. Werkt perfect met Kenwa.",
+        "price": "39,95",
+        "badge": "Nieuw",
+        "category": "gps"
+      },
+      {
+        "title": "Smart Locator Tag",
+        "description": "Bluetooth-tag voor sleutels en bagage. Vind verloren items terug via de app. Compact en waterbestendig.",
+        "price": "29,95",
+        "badge": "",
+        "category": "gps"
+      },
+      {
+        "title": "Familie Veiligheidskit",
+        "description": "Compleet pakket: 2x noodalarm, reflectiebandjes en uitgebreide EHBO-gids. Voor het hele gezin.",
+        "price": "54,95",
+        "badge": "Bestseller",
+        "category": "personal"
+      },
+      {
+        "title": "GPS Kinderarmband",
+        "description": "Waterdichte GPS-armband voor kinderen. SOS-knop, realtime tracking en gespreksmodus. Rust voor ouders.",
+        "price": "44,95",
+        "badge": "",
+        "category": "child"
+      },
+      {
+        "title": "EHBO Reiskit Deluxe",
+        "description": "Professionele 45-delige EHBO-set voor thuis en onderweg. Compact verpakt in stevige tas. ISO-gecertificeerd.",
+        "price": "34,95",
+        "badge": "",
+        "category": "firstAid"
+      }
+    ]
+  }
+}

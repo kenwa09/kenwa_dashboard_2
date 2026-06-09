@@ -1,0 +1,1 @@
+{"version":3,"file":"index-CPW4XKTO.js","sources":["../../../../pages/index.vue"],"sourcesContent":["<script setup lang=\"ts\">\ndefinePageMeta({ middleware: ['admin'] })\nawait navigateTo('/admin', { redirectCode: 301 })\n</script>\n"],"names":["_withAsyncContext"],"mappings":";;;;;;;;;;;;;;;;AAEA,KAAA,QAAA,SAAA,IAAAA,iBAAA,MAAM,WAAW,UAAU,EAAE,cAAc,KAAK,CAAA;;;;;;;;;;;"}
