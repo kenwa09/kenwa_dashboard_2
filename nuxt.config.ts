@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     // URL van de kenwa backend — alle API calls worden hierheen geproxyd
-    kenwaApiUrl: process.env.KENWA_API_URL || 'http://localhost:3000',
+    kenwaApiUrl: process.env.KENWA_API_URL || 'https://kenwa.nl',
     public: {
       appName: 'Kenwa Admin'
     }
