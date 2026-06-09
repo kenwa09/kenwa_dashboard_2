@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node_modules/.bin/nuxt dev --port 3001",
-    "build": "node_modules/.bin/nuxt build",
-    "preview": "node_modules/.bin/nuxt preview",
+    "dev": "node node_modules/nuxt/bin/nuxt.mjs dev --port 3001",
+    "build": "node node_modules/nuxt/bin/nuxt.mjs build",
+    "preview": "node node_modules/nuxt/bin/nuxt.mjs preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
