@@ -4366,7 +4366,7 @@ const _inlineRuntimeConfig = {
   "public": {
     "appName": "Kenwa Admin"
   },
-  "kenwaApiUrl": "http://localhost:3000"
+  "kenwaApiUrl": "https://kenwa.nl"
 };
 const envOptions = {
   prefix: "NITRO_",
