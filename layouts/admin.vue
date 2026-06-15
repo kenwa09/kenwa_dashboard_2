@@ -1,5 +1,5 @@
 <template>
-  <div class="admin-shell" :class="{ 'sidebar-collapsed': collapsed }">
+  <div class="admin-shell" :class="{ 'sidebar-collapsed': collapsed, 'mobile-open': mobileOpen }">
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-header">
@@ -237,7 +237,7 @@ async function handleLogout () {
 .admin-shell {
   display: flex;
   min-height: 100vh;
-  background: #0b1120;
+  background: #f1f5f9;
   --sidebar-w: 228px;
   --sidebar-w-collapsed: 64px;
   --topbar-h: 56px;
@@ -247,8 +247,8 @@ async function handleLogout () {
 .sidebar {
   width: var(--sidebar-w);
   flex-shrink: 0;
-  background: #0d1526;
-  border-right: 1px solid rgba(99, 102, 241, 0.1);
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -271,7 +271,7 @@ async function handleLogout () {
   justify-content: space-between;
   padding: 0 1rem;
   height: var(--topbar-h);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  border-bottom: 1px solid #f1f5f9;
   flex-shrink: 0;
 }
 
@@ -300,7 +300,7 @@ async function handleLogout () {
 .brand-name {
   font-size: 1rem;
   font-weight: 800;
-  color: #e2e8f0;
+  color: #111827;
   letter-spacing: -0.02em;
 }
 
@@ -309,9 +309,9 @@ async function handleLogout () {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #818cf8;
-  background: rgba(99, 102, 241, 0.15);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #6741ff;
+  background: rgba(103, 65, 255, 0.1);
+  border: 1px solid rgba(103, 65, 255, 0.2);
   padding: 0.1rem 0.4rem;
   border-radius: 999px;
 }
@@ -320,7 +320,7 @@ async function handleLogout () {
   flex-shrink: 0;
   background: none;
   border: none;
-  color: rgba(150, 170, 220, 0.4);
+  color: #9ca3af;
   cursor: pointer;
   padding: 0.375rem;
   border-radius: 0.375rem;
@@ -330,8 +330,8 @@ async function handleLogout () {
 }
 
 .collapse-btn:hover {
-  color: #818cf8;
-  background: rgba(99, 102, 241, 0.1);
+  color: #6741ff;
+  background: rgba(103, 65, 255, 0.08);
 }
 
 /* ── Nav ──────────────────────────────────────────────── */
@@ -344,7 +344,7 @@ async function handleLogout () {
   flex-direction: column;
   gap: 1.25rem;
   scrollbar-width: thin;
-  scrollbar-color: rgba(99, 102, 241, 0.2) transparent;
+  scrollbar-color: rgba(103, 65, 255, 0.15) transparent;
 }
 
 .nav-section {
@@ -358,7 +358,7 @@ async function handleLogout () {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(130, 150, 200, 0.35);
+  color: #9ca3af;
   padding: 0 0.625rem;
   margin-bottom: 0.25rem;
   white-space: nowrap;
@@ -376,7 +376,7 @@ async function handleLogout () {
   gap: 0.75rem;
   padding: 0.5rem 0.625rem;
   border-radius: 0.5rem;
-  color: rgba(160, 185, 230, 0.6);
+  color: #4b5563;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
@@ -402,19 +402,19 @@ async function handleLogout () {
 }
 
 .nav-item:hover {
-  color: #c7d2fe;
-  background: rgba(99, 102, 241, 0.1);
+  color: #6741ff;
+  background: rgba(103, 65, 255, 0.07);
 }
 
 .nav-item.router-link-active,
 .nav-item.router-link-exact-active {
-  color: #a5b4fc;
-  background: rgba(99, 102, 241, 0.15);
+  color: #6741ff;
+  background: rgba(103, 65, 255, 0.1);
   font-weight: 600;
 }
 
 .nav-item.router-link-active svg {
-  color: #818cf8;
+  color: #6741ff;
 }
 
 .nav-badge {
@@ -425,9 +425,9 @@ async function handleLogout () {
   letter-spacing: 0.05em;
   padding: 0.1rem 0.375rem;
   border-radius: 999px;
-  background: rgba(99, 102, 241, 0.2);
-  border: 1px solid rgba(99, 102, 241, 0.3);
-  color: #818cf8;
+  background: rgba(103, 65, 255, 0.1);
+  border: 1px solid rgba(103, 65, 255, 0.2);
+  color: #6741ff;
   flex-shrink: 0;
   transition: opacity 0.15s;
 }
@@ -441,8 +441,8 @@ async function handleLogout () {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.875rem 0.875rem;
-  border-top: 1px solid rgba(99, 102, 241, 0.1);
+  padding: 0.875rem;
+  border-top: 1px solid #f1f5f9;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -452,7 +452,7 @@ async function handleLogout () {
   height: 32px;
   flex-shrink: 0;
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  background: linear-gradient(135deg, #6741ff, #5533ee);
   color: white;
   font-size: 0.8rem;
   font-weight: 700;
@@ -477,7 +477,7 @@ async function handleLogout () {
   display: block;
   font-size: 0.825rem;
   font-weight: 600;
-  color: #c7d2fe;
+  color: #111827;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -486,14 +486,14 @@ async function handleLogout () {
 .user-role {
   display: block;
   font-size: 0.7rem;
-  color: rgba(130, 150, 200, 0.4);
+  color: #9ca3af;
 }
 
 .logout-btn {
   flex-shrink: 0;
   background: none;
   border: none;
-  color: rgba(239, 68, 68, 0.5);
+  color: rgba(220, 38, 38, 0.45);
   cursor: pointer;
   padding: 0.375rem;
   border-radius: 0.375rem;
@@ -503,8 +503,8 @@ async function handleLogout () {
 }
 
 .logout-btn:hover:not(:disabled) {
-  color: #fca5a5;
-  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  background: #fef2f2;
 }
 
 .logout-btn:disabled {
@@ -529,8 +529,8 @@ async function handleLogout () {
 /* ── Topbar ───────────────────────────────────────────── */
 .topbar {
   height: var(--topbar-h);
-  background: rgba(13, 21, 38, 0.95);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -538,14 +538,13 @@ async function handleLogout () {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(8px);
 }
 
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-  color: rgba(160, 185, 230, 0.7);
+  color: #6b7280;
   cursor: pointer;
   padding: 0.375rem;
   border-radius: 0.375rem;
@@ -553,8 +552,8 @@ async function handleLogout () {
 }
 
 .mobile-menu-btn:hover {
-  color: #a5b4fc;
-  background: rgba(99, 102, 241, 0.1);
+  color: #6741ff;
+  background: rgba(103, 65, 255, 0.07);
 }
 
 .topbar-breadcrumb {
@@ -564,7 +563,7 @@ async function handleLogout () {
 .topbar-title {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #c7d2fe;
+  color: #111827;
 }
 
 .topbar-actions {
@@ -575,7 +574,7 @@ async function handleLogout () {
 
 .topbar-user {
   font-size: 0.8rem;
-  color: rgba(130, 150, 200, 0.45);
+  color: #9ca3af;
   font-family: monospace;
 }
 
@@ -583,6 +582,7 @@ async function handleLogout () {
 .page-content {
   flex: 1;
   padding: 1.5rem;
+  background: #f1f5f9;
   min-height: calc(100vh - var(--topbar-h));
 }
 
@@ -591,7 +591,7 @@ async function handleLogout () {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 199;
 }
 
@@ -600,6 +600,11 @@ async function handleLogout () {
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.25s ease, width 0.2s ease;
+  }
+
+  .mobile-open .sidebar {
+    transform: translateX(0);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
   }
 
   .main-area {

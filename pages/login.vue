@@ -265,14 +265,16 @@ function cancelTwoFactor () {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #080d1a;
+  background:
+    linear-gradient(135deg, rgba(103, 65, 255, 0.9) 0%, rgba(67, 40, 200, 0.93) 55%, rgba(15, 8, 60, 0.97) 100%),
+    url('/hero-mockup.png') center / cover no-repeat;
   padding: 2rem 1rem;
   position: relative;
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* ── Background ───────────────────────────────────────── */
+/* ── Background decoration ────────────────────────────── */
 .bg-pattern {
   position: absolute;
   inset: 0;
@@ -283,8 +285,8 @@ function cancelTwoFactor () {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -292,23 +294,23 @@ function cancelTwoFactor () {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.18;
+  opacity: 0.2;
 }
 
 .glow-1 {
-  width: 600px;
-  height: 600px;
-  background: #6366f1;
-  top: -200px;
-  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: #a78bfa;
+  top: -150px;
+  right: -80px;
 }
 
 .glow-2 {
-  width: 500px;
-  height: 500px;
-  background: #2563eb;
-  bottom: -200px;
-  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: #06b6d4;
+  bottom: -150px;
+  left: -60px;
 }
 
 /* ── Wrapper ──────────────────────────────────────────── */
@@ -337,7 +339,7 @@ function cancelTwoFactor () {
 .brand-name {
   font-size: 1.375rem;
   font-weight: 800;
-  color: #f0f6ff;
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
@@ -346,9 +348,9 @@ function cancelTwoFactor () {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #818cf8;
-  background: rgba(99, 102, 241, 0.15);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
   margin-left: 0.25rem;
@@ -357,20 +359,17 @@ function cancelTwoFactor () {
 .brand-sub {
   margin: 0.4rem 0 0;
   font-size: 0.825rem;
-  color: rgba(180, 200, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* ── Card ─────────────────────────────────────────────── */
 .login-card {
   width: 100%;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(99, 102, 241, 0.18);
+  background: #ffffff;
   border-radius: 1.25rem;
-  backdrop-filter: blur(16px);
   box-shadow:
-    0 0 0 1px rgba(99, 102, 241, 0.08),
-    0 24px 64px -12px rgba(0, 0, 0, 0.7),
-    0 0 80px -20px rgba(99, 102, 241, 0.12);
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
@@ -390,36 +389,36 @@ function cancelTwoFactor () {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(37, 99, 235, 0.15));
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, rgba(103, 65, 255, 0.1), rgba(85, 51, 238, 0.07));
+  border: 1px solid rgba(103, 65, 255, 0.2);
   border-radius: 0.875rem;
-  color: #818cf8;
+  color: #6741ff;
   margin: 0 auto 1rem;
 }
 
 .twofa-icon-wrap {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(6, 182, 212, 0.1));
-  border-color: rgba(37, 99, 235, 0.3);
-  color: #60a5fa;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(103, 65, 255, 0.07));
+  border-color: rgba(6, 182, 212, 0.25);
+  color: #06b6d4;
 }
 
 .card-header h1 {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #f0f6ff;
+  color: #111827;
   margin: 0 0 0.4rem;
   letter-spacing: -0.02em;
 }
 
 .card-header p {
   font-size: 0.875rem;
-  color: rgba(180, 200, 255, 0.6);
+  color: #6b7280;
   margin: 0;
   line-height: 1.5;
 }
 
 .email-highlight {
-  color: #a5b4fc;
+  color: #6741ff;
   font-weight: 600;
 }
 
@@ -439,7 +438,7 @@ function cancelTwoFactor () {
 .field label {
   font-size: 0.8rem;
   font-weight: 600;
-  color: rgba(180, 200, 255, 0.7);
+  color: #374151;
   letter-spacing: 0.02em;
 }
 
@@ -452,7 +451,7 @@ function cancelTwoFactor () {
   left: 0.875rem;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(130, 150, 200, 0.5);
+  color: #9ca3af;
   pointer-events: none;
 }
 
@@ -460,10 +459,10 @@ function cancelTwoFactor () {
 .code-input {
   width: 100%;
   padding: 0.75rem 0.875rem 0.75rem 2.5rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
   border-radius: 0.625rem;
-  color: #e2e8f0;
+  color: #111827;
   font-size: 0.9rem;
   transition: all 0.15s ease;
   box-sizing: border-box;
@@ -471,13 +470,13 @@ function cancelTwoFactor () {
 }
 
 .input-wrap input::placeholder {
-  color: rgba(130, 150, 200, 0.35);
+  color: #d1d5db;
 }
 
 .input-wrap input:focus {
-  border-color: #6366f1;
-  background: rgba(99, 102, 241, 0.06);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+  border-color: #6741ff;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(103, 65, 255, 0.12);
 }
 
 .eye-btn {
@@ -489,14 +488,14 @@ function cancelTwoFactor () {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: rgba(130, 150, 200, 0.5);
+  color: #9ca3af;
   display: flex;
   align-items: center;
   transition: color 0.15s;
 }
 
 .eye-btn:hover {
-  color: #818cf8;
+  color: #6741ff;
 }
 
 /* ── 2FA code input ───────────────────────────────────── */
@@ -507,13 +506,15 @@ function cancelTwoFactor () {
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.4em;
-  background: rgba(99, 102, 241, 0.06);
-  border-color: rgba(99, 102, 241, 0.3);
+  background: #faf8ff;
+  border-color: rgba(103, 65, 255, 0.2);
+  color: #111827;
 }
 
 .code-input:focus {
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  border-color: #6741ff;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(103, 65, 255, 0.12);
 }
 
 /* ── Info banner ──────────────────────────────────────── */
@@ -522,18 +523,18 @@ function cancelTwoFactor () {
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 0.875rem;
-  background: rgba(37, 99, 235, 0.1);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
   border-radius: 0.5rem;
-  color: #93c5fd;
+  color: #2563eb;
   font-size: 0.8rem;
   margin-bottom: 1.25rem;
 }
 
 /* ── Fallback code ────────────────────────────────────── */
 .fallback-code {
-  background: rgba(234, 179, 8, 0.08);
-  border: 1px solid rgba(234, 179, 8, 0.25);
+  background: #fffbeb;
+  border: 1px solid #fde68a;
   border-radius: 0.625rem;
   padding: 0.875rem 1rem;
   text-align: center;
@@ -542,7 +543,7 @@ function cancelTwoFactor () {
 
 .fallback-code p {
   font-size: 0.8rem;
-  color: #fde68a;
+  color: #92400e;
   margin: 0 0 0.4rem;
 }
 
@@ -550,7 +551,7 @@ function cancelTwoFactor () {
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.35em;
-  color: #fbbf24;
+  color: #d97706;
 }
 
 /* ── Error box ────────────────────────────────────────── */
@@ -559,10 +560,10 @@ function cancelTwoFactor () {
   align-items: flex-start;
   gap: 0.5rem;
   padding: 0.75rem 0.875rem;
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.25);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
   border-radius: 0.625rem;
-  color: #fca5a5;
+  color: #dc2626;
   font-size: 0.85rem;
 }
 
@@ -579,7 +580,7 @@ function cancelTwoFactor () {
   gap: 0.5rem;
   width: 100%;
   padding: 0.8rem 1rem;
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  background: linear-gradient(135deg, #6741ff, #5533ee);
   color: white;
   border: none;
   border-radius: 0.625rem;
@@ -587,19 +588,19 @@ function cancelTwoFactor () {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 16px rgba(103, 65, 255, 0.4);
   margin-top: 0.25rem;
 }
 
 .btn-submit:hover:not(:disabled) {
-  background: linear-gradient(135deg, #818cf8, #6366f1);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+  background: linear-gradient(135deg, #7c5cff, #6741ff);
+  box-shadow: 0 6px 20px rgba(103, 65, 255, 0.5);
   transform: translateY(-1px);
 }
 
 .btn-submit:active:not(:disabled) {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 2px 8px rgba(103, 65, 255, 0.3);
 }
 
 .btn-submit:disabled {
@@ -616,7 +617,7 @@ function cancelTwoFactor () {
   width: 100%;
   padding: 0.625rem;
   background: none;
-  color: rgba(180, 200, 255, 0.5);
+  color: #9ca3af;
   border: none;
   font-size: 0.85rem;
   cursor: pointer;
@@ -624,7 +625,7 @@ function cancelTwoFactor () {
 }
 
 .btn-back:hover {
-  color: #a5b4fc;
+  color: #6741ff;
 }
 
 /* ── Spinner ──────────────────────────────────────────── */
@@ -660,12 +661,12 @@ function cancelTwoFactor () {
   align-items: center;
   gap: 0.3rem;
   font-size: 0.75rem;
-  color: rgba(100, 180, 100, 0.7);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .footer-text {
   font-size: 0.75rem;
-  color: rgba(130, 150, 200, 0.35);
+  color: rgba(255, 255, 255, 0.35);
   margin: 0;
 }
 
