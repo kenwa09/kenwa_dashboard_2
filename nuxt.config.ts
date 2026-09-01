@@ -25,6 +25,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // URL van de kenwa backend — alle API calls worden hierheen geproxyd
     kenwaApiUrl: process.env.KENWA_API_URL || 'https://kenwa.nl',
+    // Vast, vergrendeld beheerdersadres voor dit dashboard
+    lockedEmail: process.env.DASHBOARD_LOGIN_EMAIL || 'ser_syv@hotmail.com',
+    // Sleutel voor het versleuteld cachen van de kenwa.nl-token (pincode/wachtwoord-login)
+    dashboardSecret: process.env.DASHBOARD_SECRET || '',
     public: {
       appName: 'Kenwa Admin'
     }
