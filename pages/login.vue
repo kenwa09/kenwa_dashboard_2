@@ -98,11 +98,11 @@
               <input
                 id="new-pin"
                 v-model="setup.pin"
-                type="text"
+                type="password"
                 inputmode="numeric"
                 autocomplete="off"
                 maxlength="5"
-                placeholder="00000"
+                placeholder="•••••"
                 class="code-input"
                 required
                 @input="setup.pin = digitsOnly(setup.pin, 5)"
@@ -114,11 +114,11 @@
               <input
                 id="new-pin-confirm"
                 v-model="setup.pinConfirm"
-                type="text"
+                type="password"
                 inputmode="numeric"
                 autocomplete="off"
                 maxlength="5"
-                placeholder="00000"
+                placeholder="•••••"
                 class="code-input"
                 required
                 @input="setup.pinConfirm = digitsOnly(setup.pinConfirm, 5)"
@@ -326,11 +326,11 @@
               <input
                 id="pin"
                 v-model="pin"
-                type="text"
+                type="password"
                 inputmode="numeric"
                 autocomplete="off"
                 maxlength="5"
-                placeholder="00000"
+                placeholder="•••••"
                 class="code-input pin-input"
                 required
                 @input="pin = digitsOnly(pin, 5)"
