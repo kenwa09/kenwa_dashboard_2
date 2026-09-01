@@ -1,4 +1,8 @@
 import { attachTokenCookie } from '~/server/utils/auth'
+import {
+  readStore, writeStore, blankRecord, isConfigured, cacheKenwaToken, getLockedEmail,
+  issueDeviceCookie, registerTrustedDevice, readDeviceToken
+} from '~/server/utils/adminAuth'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -18,7 +22,22 @@ export default defineEventHandler(async (event) => {
     }
 
     attachTokenCookie(event, response.token)
-    return response
+
+    // Ververs de versleuteld gecachete kenwa.nl-token zodat pincode/wachtwoord
+    // de komende ~7 dagen direct kunnen inloggen. Raakt kenwa.nl niet aan.
+    const record = (await readStore()) || blankRecord()
+    record.email = getLockedEmail()
+    cacheKenwaToken(record, response.token)
+
+    // Vertrouw dit apparaat: een volledige e-mail+2FA-login is de enige manier
+    // waarop een apparaat pincode/wachtwoord-login mag gebruiken.
+    const existingDevice = readDeviceToken(event)
+    const rawDevice = existingDevice || issueDeviceCookie(event)
+    registerTrustedDevice(record, rawDevice, 'email-login')
+
+    await writeStore(record)
+
+    return { ...response, dashboardConfigured: isConfigured(record) }
   } catch (err: any) {
     if (err.statusCode) throw err
     throw createError({

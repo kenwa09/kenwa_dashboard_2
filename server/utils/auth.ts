@@ -25,3 +25,21 @@ export function attachTokenCookie (event: H3Event, token: string) {
 export function clearTokenCookie (event: H3Event) {
   setCookie(event, TOKEN_COOKIE, '', { maxAge: 0, path: '/' })
 }
+
+/**
+ * Controleert bij kenwa.nl of een token nog geldig is én bij een admin hoort.
+ * Retourneert het user-object of null. Wijzigt niets aan kenwa.nl.
+ */
+export async function verifyKenwaAdminToken (token: string): Promise<{ role: string; [key: string]: any } | null> {
+  const { kenwaApiUrl } = useRuntimeConfig()
+  try {
+    const res = await $fetch<{ user: { role: string; [key: string]: any } }>(
+      `${kenwaApiUrl}/api/auth/profile`,
+      { headers: { Authorization: `Bearer ${token}` } }
+    )
+    if (res.user?.role !== 'admin') return null
+    return res.user
+  } catch {
+    return null
+  }
+}

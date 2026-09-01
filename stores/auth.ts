@@ -30,6 +30,8 @@ export const useAuthStore = defineStore('auth', () => {
   const error = ref<string | null>(null)
   const errorDetail = ref<string | null>(null)
   const pendingLoginChallenge = ref<PendingLoginChallenge | null>(null)
+  const authConfig = ref<{ lockedEmail: string; configured: boolean; deviceTrusted: boolean } | null>(null)
+  const needsSetup = ref(false)
 
   function resetErrorState () {
     error.value = null
@@ -119,6 +121,7 @@ export const useAuthStore = defineStore('auth', () => {
       user.value = response.user
       token.value = response.token
       pendingLoginChallenge.value = null
+      needsSetup.value = !(response as any).dashboardConfigured
       return user.value
     } catch (err: any) {
       error.value = err?.data?.statusMessage || err.message || 'Verifiëren van code mislukt'
@@ -135,6 +138,66 @@ export const useAuthStore = defineStore('auth', () => {
   function cancelLoginChallenge () {
     resetErrorState()
     pendingLoginChallenge.value = null
+  }
+
+  async function fetchAuthConfig () {
+    try {
+      authConfig.value = await $fetch('/api/auth/config')
+    } catch {
+      authConfig.value = null
+    }
+    return authConfig.value
+  }
+
+  async function completeSetup (payload: { password: string; pin: string }) {
+    loading.value = true
+    resetErrorState()
+    try {
+      await $fetch('/api/auth/setup', { method: 'POST', body: payload })
+      needsSetup.value = false
+      await fetchProfile()
+      await fetchAuthConfig()
+      return user.value
+    } catch (err: any) {
+      error.value = err?.data?.statusMessage || err.message || 'Instellen van wachtwoord en pincode mislukt'
+      throw err
+    } finally {
+      loading.value = false
+    }
+  }
+
+  async function loginWithSecret (endpoint: '/api/auth/pin' | '/api/auth/password', body: Record<string, string>, fallbackMsg: string) {
+    loading.value = true
+    resetErrorState()
+    try {
+      const response = await $fetch<any>(endpoint, { method: 'POST', body })
+      if (response?.needFullLogin) {
+        error.value = response.message || 'Je sessie is verlopen. Log in via e-mail.'
+        return { needFullLogin: true as const }
+      }
+      if (response.user?.role !== 'admin') {
+        error.value = 'Toegang geweigerd. Alleen admins kunnen inloggen op dit dashboard.'
+        return null
+      }
+      user.value = response.user
+      token.value = response.token
+      pendingLoginChallenge.value = null
+      needsSetup.value = false
+      return user.value
+    } catch (err: any) {
+      error.value = err?.data?.statusMessage || err.message || fallbackMsg
+      throw err
+    } finally {
+      loading.value = false
+    }
+  }
+
+  function loginWithPin (pin: string) {
+    return loginWithSecret('/api/auth/pin', { pin }, 'Inloggen met pincode mislukt')
+  }
+
+  function loginWithPassword (password: string) {
+    return loginWithSecret('/api/auth/password', { password }, 'Inloggen met wachtwoord mislukt')
   }
 
   async function fetchProfile () {
@@ -167,6 +230,7 @@ export const useAuthStore = defineStore('auth', () => {
     token.value = null
     user.value = null
     pendingLoginChallenge.value = null
+    needsSetup.value = false
   }
 
   const loggedIn = computed(() => !!user.value && !!token.value && user.value.role === 'admin')
@@ -179,11 +243,17 @@ export const useAuthStore = defineStore('auth', () => {
     error,
     errorDetail,
     pendingLoginChallenge,
+    authConfig,
+    needsSetup,
     loggedIn,
     awaitingTwoFactor,
     login,
     verifyLoginCode,
     cancelLoginChallenge,
+    fetchAuthConfig,
+    completeSetup,
+    loginWithPin,
+    loginWithPassword,
     fetchProfile,
     logout
   }
