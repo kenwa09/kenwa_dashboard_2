@@ -5,6 +5,15 @@ import {
   assertPinNotLocked, registerPinFailure, resetPinFailures
 } from '~/server/utils/adminAuth'
 
+/** Opslaan mag de inlogflow niet breken bij een niet-beschrijfbare opslag. */
+async function persist (record: Parameters<typeof writeStore>[0]) {
+  try {
+    await writeStore(record)
+  } catch (e: any) {
+    console.warn('[auth] pin: kon opslag niet bijwerken:', e?.code || e?.message)
+  }
+}
+
 /**
  * Snelle inlog met alleen de 5-cijferige pincode.
  * Werkt uitsluitend op een apparaat dat eerder via e-mail is ingelogd
@@ -35,7 +44,7 @@ export default defineEventHandler(async (event) => {
 
   if (!verifySecret(pin, record.pinHash, record.pinSalt)) {
     registerPinFailure(record)
-    await writeStore(record)
+    await persist(record)
     assertPinNotLocked(record) // gooit 429 als deze poging de blokkade activeerde
     throw createError({ statusCode: 401, statusMessage: 'Onjuiste pincode.' })
   }
@@ -47,7 +56,7 @@ export default defineEventHandler(async (event) => {
     record.kenwaTokenEnc = null
     record.kenwaTokenExp = null
     resetPinFailures(record)
-    await writeStore(record)
+    await persist(record)
     return {
       needFullLogin: true,
       message: 'Je sessie is verlopen. Log opnieuw in via e-mail; daarna werkt je pincode weer.'
@@ -55,7 +64,7 @@ export default defineEventHandler(async (event) => {
   }
 
   resetPinFailures(record)
-  await writeStore(record)
+  await persist(record)
 
   attachTokenCookie(event, cached)
   return { token: cached, user }

@@ -5,6 +5,15 @@ import {
   assertPasswordNotLocked, registerPasswordFailure, resetPasswordFailures
 } from '~/server/utils/adminAuth'
 
+/** Opslaan mag de inlogflow niet breken bij een niet-beschrijfbare opslag. */
+async function persist (record: Parameters<typeof writeStore>[0]) {
+  try {
+    await writeStore(record)
+  } catch (e: any) {
+    console.warn('[auth] password: kon opslag niet bijwerken:', e?.code || e?.message)
+  }
+}
+
 /**
  * Inlog met het dashboard-eigen wachtwoord (geen kenwa.nl-wachtwoord).
  * Werkt uitsluitend op een vertrouwd apparaat en zolang de gecachete
@@ -35,7 +44,7 @@ export default defineEventHandler(async (event) => {
 
   if (!verifySecret(password, record.passwordHash, record.passwordSalt)) {
     registerPasswordFailure(record)
-    await writeStore(record)
+    await persist(record)
     assertPasswordNotLocked(record)
     throw createError({ statusCode: 401, statusMessage: 'Onjuist dashboardwachtwoord.' })
   }
@@ -47,7 +56,7 @@ export default defineEventHandler(async (event) => {
     record.kenwaTokenEnc = null
     record.kenwaTokenExp = null
     resetPasswordFailures(record)
-    await writeStore(record)
+    await persist(record)
     return {
       needFullLogin: true,
       message: 'Je sessie is verlopen. Log opnieuw in via e-mail; daarna werkt je wachtwoord weer.'
@@ -55,7 +64,7 @@ export default defineEventHandler(async (event) => {
   }
 
   resetPasswordFailures(record)
-  await writeStore(record)
+  await persist(record)
 
   attachTokenCookie(event, cached)
   return { token: cached, user }

@@ -2,7 +2,7 @@ import { getTokenFromRequest, verifyKenwaAdminToken } from '~/server/utils/auth'
 import {
   readStore, writeStore, blankRecord, hashSecret, getLockedEmail,
   issueDeviceCookie, registerTrustedDevice, readDeviceToken, cacheKenwaToken,
-  resetPinFailures, resetPasswordFailures
+  resetPinFailures, resetPasswordFailures, storageLocation
 } from '~/server/utils/adminAuth'
 
 /**
@@ -55,12 +55,26 @@ export default defineEventHandler(async (event) => {
   resetPinFailures(record)
   resetPasswordFailures(record)
 
-  cacheKenwaToken(record, token)
+  try {
+    cacheKenwaToken(record, token)
+  } catch (e: any) {
+    console.warn('[auth] setup: kenwa.nl-token niet gecachet (DASHBOARD_SECRET?):', e?.statusMessage || e?.message)
+  }
 
   const rawDevice = readDeviceToken(event) || issueDeviceCookie(event)
   registerTrustedDevice(record, rawDevice, 'setup')
 
-  await writeStore(record)
+  try {
+    await writeStore(record)
+  } catch (e: any) {
+    throw createError({
+      statusCode: 500,
+      statusMessage:
+        'Kon het wachtwoord en de pincode niet op de server opslaan. Er is geen beschrijfbare, ' +
+        `persistente opslag geconfigureerd (${storageLocation()}). Stel DASHBOARD_STORAGE_DIR in ` +
+        'op een gekoppeld volume en probeer opnieuw.'
+    })
+  }
 
   return { ok: true }
 })

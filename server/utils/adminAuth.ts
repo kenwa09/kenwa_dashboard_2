@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs'
-import { join } from 'path'
+import { join, isAbsolute, resolve } from 'path'
 import crypto from 'crypto'
 import type { H3Event } from 'h3'
 import { getCookie, setCookie, createError } from 'h3'
@@ -12,10 +12,31 @@ import { useRuntimeConfig } from '#imports'
  * afhankelijk van de kenwa.nl-JWT; die token wordt hier alleen versleuteld
  * gecachet zodat een pincode/dashboardwachtwoord binnen de geldigheidsduur
  * (7 dagen) direct kan inloggen zonder de volledige e-mail+2FA-flow.
+ *
+ * Opslaglocatie:
+ *   - DASHBOARD_STORAGE_DIR (env)  -> gebruik dit in productie/Coolify en koppel er
+ *     een persistent volume aan, anders is de pincode na elke deployment weg.
+ *   - anders: <cwd>/server/storage  (werkt lokaal met `nuxt dev`).
+ * De gebouwde productie-server draait als `node .output/server/index.mjs`; `process.cwd()`
+ * is dan niet gegarandeerd de projectroot, dus een expliciete env is er de betrouwbare weg.
  */
 
-const STORE_DIR = join(process.cwd(), 'server/storage')
-const STORE_PATH = join(STORE_DIR, 'admin-auth.json')
+function getStoreDir (): string {
+  const fromEnv = (process.env.DASHBOARD_STORAGE_DIR || '').trim()
+  if (fromEnv) {
+    return isAbsolute(fromEnv) ? fromEnv : resolve(process.cwd(), fromEnv)
+  }
+  return join(process.cwd(), 'server/storage')
+}
+
+function getStorePath (): string {
+  return join(getStoreDir(), 'admin-auth.json')
+}
+
+/** Waar de opslag terechtkomt — voor diagnose in de logs. */
+export function storageLocation (): string {
+  return getStorePath()
+}
 
 const PBKDF2_ITERATIONS = 210_000
 const PBKDF2_KEYLEN = 64
@@ -93,27 +114,39 @@ export function blankRecord (): AdminAuthRecord {
 }
 
 export async function readStore (): Promise<AdminAuthRecord | null> {
+  const path = getStorePath()
   try {
-    const raw = await fs.readFile(STORE_PATH, 'utf-8')
+    const raw = await fs.readFile(path, 'utf-8')
     const parsed = JSON.parse(raw) as AdminAuthRecord
     if (!Array.isArray(parsed.trustedDevices)) parsed.trustedDevices = []
     return parsed
   } catch (err: any) {
     if (err?.code === 'ENOENT') return null
+    console.warn(`[adminAuth] kon opslag niet lezen (${path}): ${err?.code || err?.message}`)
     throw err
   }
 }
 
 export async function writeStore (record: AdminAuthRecord): Promise<AdminAuthRecord> {
   record.updatedAt = new Date().toISOString()
+  const dir = getStoreDir()
+  const path = getStorePath()
   const run = async () => {
-    await fs.mkdir(STORE_DIR, { recursive: true })
-    const tmp = `${STORE_PATH}.${process.pid}.${Date.now()}.tmp`
+    await fs.mkdir(dir, { recursive: true })
+    const tmp = `${path}.${process.pid}.${Date.now()}.tmp`
     await fs.writeFile(tmp, JSON.stringify(record, null, 2), { encoding: 'utf-8', mode: 0o600 })
-    await fs.rename(tmp, STORE_PATH)
+    await fs.rename(tmp, path)
   }
   writeChain = writeChain.then(run, run)
-  await writeChain
+  try {
+    await writeChain
+  } catch (err: any) {
+    console.warn(
+      `[adminAuth] kon opslag niet schrijven (${path}): ${err?.code || err?.message}. ` +
+      'Zet DASHBOARD_STORAGE_DIR naar een beschrijfbaar, persistent volume.'
+    )
+    throw err
+  }
   return record
 }
 
